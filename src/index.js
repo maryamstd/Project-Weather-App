@@ -24,6 +24,12 @@ today.innerHTML = `${year}.${month}.${date}.${day}`;
 let clock = document.querySelector(".time");
 let hours = now.getHours();
 let minutes = now.getMinutes();
+if (hours < 10) {
+  hours = `0${hours}`;
+}
+if (minutes < 10) {
+  minutes = `0${minutes}`;
+}
 clock.innerHTML = `${hours}:${minutes}`;
 
 function displayWeather(response) {
@@ -37,6 +43,12 @@ function displayWeather(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
+  document
+    .querySelector("#icon")
+    .setAttribute(
+      "src",
+      `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
 }
 
 function search(city) {

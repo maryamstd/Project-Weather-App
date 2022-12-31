@@ -31,6 +31,9 @@ input[type="button"]:hover {
   background-color: #5e859c;
   border-color: #325673;
 }
+.cityLine {
+  margin-top: 30px;
+}
 .city {
   margin-left: 200px;
   margin-top: 25px;
@@ -39,10 +42,16 @@ input[type="button"]:hover {
   font-family: "Lora", serif;
 }
 
+#icon {
+  margin-top: -20px;
+  opacity: 60%;
+}
+
 .snow {
   font-size: 20px;
   margin-left: 230px;
   font-family: "Lora", serif;
+  margin-top: -35px;
 }
 .degree {
   font-size: 70px;
