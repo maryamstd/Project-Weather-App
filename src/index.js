@@ -27,13 +27,16 @@ let minutes = now.getMinutes();
 clock.innerHTML = `${hours}:${minutes}`;
 
 function displayWeather(response) {
-  console.log(response.data);
   document.querySelector(".city").innerHTML = response.data.name;
   let mainTemp = Math.round(response.data.main.temp);
   document.querySelector(".degree").innerHTML = `${mainTemp}°C`;
   document.querySelector(".weatherType").innerHTML =
     response.data.weather[0].main;
   document.querySelector(".tempTwo").innerHTML = mainTemp;
+  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  document.querySelector("#wind").innerHTML = Math.round(
+    response.data.wind.speed
+  );
 }
 
 function search(city) {
@@ -56,17 +59,8 @@ function fahrenheit(event) {
   temperature.innerHTML = "41°F";
 }
 
-function celsius(event) {
-  event.preventDefault();
-  let temperatureC = document.querySelector(".flu");
-  temperatureC.innerHTML = "5°C";
-}
-
 let fahrenheitLink = document.querySelector("#f-l");
 fahrenheitLink.addEventListener("click", fahrenheit);
-
-let celsiusLink = document.querySelector("#c-l");
-celsiusLink.addEventListener("click", celsius);
 
 function searchCurrentLocation(position) {
   let apiKey = "da9d6445cc8219090c0c21ead21a8c28";

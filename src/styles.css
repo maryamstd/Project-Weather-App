@@ -47,6 +47,13 @@ input[type="button"]:hover {
 .degree {
   font-size: 70px;
 }
+.info {
+  list-style: none;
+  position: absolute;
+  margin-left: 450px;
+  margin-top: -80px;
+  font-family: "Lora", serif;
+}
 .row {
   margin-left: 180px;
   margin-top: 30px;
@@ -106,8 +113,8 @@ p {
 }
 .time {
   position: absolute;
-  margin-top: 450px;
-  margin-left: 815px;
+  margin-top: 460px;
+  margin-left: 820px;
   font-size: 55px;
   font-weight: bold;
   font-family: "Lora", serif;
