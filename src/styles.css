@@ -1,0 +1,121 @@
+form {
+  margin-top: 10px;
+  margin-left: 190px;
+}
+input[type="text"] {
+  padding: 1px 70px 1px 10px;
+  background: none;
+  border-radius: 5px;
+  border-color: black;
+}
+::placeholder {
+  color: black;
+}
+input[type="submit"] {
+  background-color: #242f42;
+  color: white;
+  border-radius: 5px;
+  padding: 1px 19px 1px 19px;
+}
+input[type="submit"]:hover {
+  background-color: #5e859c;
+  border-color: #325673;
+}
+input[type="button"] {
+  background-color: #242f42;
+  color: white;
+  border-radius: 5px;
+  padding: 1px 19px 1px 19px;
+}
+input[type="button"]:hover {
+  background-color: #5e859c;
+  border-color: #325673;
+}
+.city {
+  margin-left: 200px;
+  margin-top: 25px;
+  font-size: 50px;
+  margin-bottom: 0px;
+  font-family: "Lora", serif;
+}
+
+.snow {
+  font-size: 20px;
+  margin-left: 230px;
+  font-family: "Lora", serif;
+}
+.degree {
+  font-size: 70px;
+}
+.row {
+  margin-left: 180px;
+  margin-top: 30px;
+  margin-top: 25px;
+}
+.card {
+  background: none;
+  border-width: 1px;
+  border-color: black;
+  margin: -8px -8px;
+}
+p {
+  margin-left: 10;
+}
+.card-title {
+  font-size: 12px;
+  text-align: center;
+}
+.card-text {
+  font-size: 10px;
+  margin-bottom: 1px;
+  text-align: center;
+}
+.Weather {
+  text-align: center;
+}
+.Wday {
+  font-size: 35px;
+  color: #182433;
+  opacity: 70%;
+}
+.Dday {
+  font-size: 15px;
+}
+.icon {
+  position: absolute;
+  margin-top: 125px;
+  margin-left: 830px;
+  font-size: 130px;
+  opacity: 60%;
+  color: #458aaa;
+  -webkit-text-stroke: 2px #ffffff;
+}
+.flu {
+  position: absolute;
+  margin-top: 330px;
+  margin-left: 845px;
+  font-size: 25px;
+  color: #f5fdff;
+  text-shadow: 1px 1px 2px rgb(123, 144, 158), 0 0 1em #0e3246,
+    0 0 0.2em #112b4b;
+}
+.date {
+  position: absolute;
+  margin-top: 440px;
+  margin-left: 833px;
+}
+.time {
+  position: absolute;
+  margin-top: 450px;
+  margin-left: 815px;
+  font-size: 55px;
+  font-weight: bold;
+  font-family: "Lora", serif;
+}
+.open-source {
+  color: white;
+  position: absolute;
+  margin-top: 575px;
+  margin-left: 290px;
+  font-size: 14px;
+}
