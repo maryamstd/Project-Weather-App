@@ -32,7 +32,7 @@ input[type="button"]:hover {
   border-color: #325673;
 }
 .cityLine {
-  margin-top: 30px;
+  margin-top: 15px;
 }
 .city {
   margin-left: 200px;
@@ -49,19 +49,33 @@ input[type="button"]:hover {
 
 .snow {
   font-size: 20px;
-  margin-left: 230px;
+  margin-left: 200px;
   font-family: "Lora", serif;
   margin-top: -35px;
+  line-height: 1.3;
 }
+.weatherType {
+  opacity: 60%;
+}
+
 .degree {
   font-size: 70px;
+}
+#mainUnit {
+  position: relative;
+  top: -35px;
+  font-size: 18px;
 }
 .info {
   list-style: none;
   position: absolute;
-  margin-left: 450px;
-  margin-top: -80px;
+  margin-left: 270px;
+  margin-top: -73px;
   font-family: "Lora", serif;
+  opacity: 60%;
+  font-size: 14px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 .row {
   margin-left: 180px;
@@ -106,14 +120,22 @@ p {
   color: #458aaa;
   -webkit-text-stroke: 2px #ffffff;
 }
+
 .flu {
   position: absolute;
   margin-top: 330px;
-  margin-left: 845px;
-  font-size: 25px;
+  margin-left: 855px;
+  font-size: 40px;
   color: #f5fdff;
   text-shadow: 1px 1px 2px rgb(123, 144, 158), 0 0 1em #0e3246,
     0 0 0.2em #112b4b;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.units {
+  position: relative;
+  top: -15px;
+  font-size: 18px;
 }
 .date {
   position: absolute;
@@ -123,13 +145,14 @@ p {
 .time {
   position: absolute;
   margin-top: 460px;
-  margin-left: 820px;
+  margin-left: 805px;
   font-size: 55px;
   font-weight: bold;
-  font-family: "Lora", serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 .open-source {
-  color: white;
+  color: rgb(159, 201, 240);
   position: absolute;
   margin-top: 575px;
   margin-left: 290px;

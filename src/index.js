@@ -35,7 +35,7 @@ clock.innerHTML = `${hours}:${minutes}`;
 function displayWeather(response) {
   document.querySelector(".city").innerHTML = response.data.name;
   let mainTemp = Math.round(response.data.main.temp);
-  document.querySelector(".degree").innerHTML = `${mainTemp}°C`;
+  document.querySelector(".degree").innerHTML = mainTemp;
   document.querySelector(".weatherType").innerHTML =
     response.data.weather[0].main;
   document.querySelector(".tempTwo").innerHTML = mainTemp;
@@ -65,15 +65,6 @@ function cityChange(event) {
 let form = document.querySelector("#searchCity");
 form.addEventListener("submit", cityChange);
 
-function fahrenheit(event) {
-  event.preventDefault();
-  let temperature = document.querySelector(".flu");
-  temperature.innerHTML = "41°F";
-}
-
-let fahrenheitLink = document.querySelector("#f-l");
-fahrenheitLink.addEventListener("click", fahrenheit);
-
 function searchCurrentLocation(position) {
   let apiKey = "da9d6445cc8219090c0c21ead21a8c28";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
@@ -87,4 +78,15 @@ function currentWeather(event) {
 
 let currentLocationButton = document.querySelector("#current_location_button");
 currentLocationButton.addEventListener("click", currentWeather);
+
+function fahrenheit(event) {
+  event.preventDefault();
+  let fTemp = (14 * 9) / 5 + 32;
+  let newTemp = document.querySelector(".tempTwo");
+  newTemp.innerHTML = Math.round(fTemp);
+}
+
+let fahrenheitLink = document.querySelector("#f-l");
+fahrenheitLink.addEventListener("click", fahrenheit);
+
 search("New York");
