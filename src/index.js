@@ -49,6 +49,7 @@ function displayWeather(response) {
       "src",
       `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
+  celtemp = Math.round(response.data.main.temp);
 }
 
 function search(city) {
@@ -81,12 +82,24 @@ currentLocationButton.addEventListener("click", currentWeather);
 
 function fahrenheit(event) {
   event.preventDefault();
-  let fTemp = (14 * 9) / 5 + 32;
   let newTemp = document.querySelector(".tempTwo");
+  celsiusLink.classList.remove("c-l");
+  fahrenheitLink.classList.add("c-l");
+  let fTemp = (celtemp * 9) / 5 + 32;
   newTemp.innerHTML = Math.round(fTemp);
 }
+function celsius(event) {
+  event.preventDefault();
+  celsiusLink.classList.add("c-l");
+  fahrenheitLink.classList.remove("c-l");
+  let newTemp = document.querySelector(".tempTwo");
+  newTemp.innerHTML = celtemp;
+}
+let celtemp = null;
 
 let fahrenheitLink = document.querySelector("#f-l");
 fahrenheitLink.addEventListener("click", fahrenheit);
+let celsiusLink = document.querySelector("#c-l");
+celsiusLink.addEventListener("click", celsius);
 
 search("New York");

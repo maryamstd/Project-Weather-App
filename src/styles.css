@@ -135,8 +135,17 @@ p {
 .units {
   position: relative;
   top: -15px;
-  font-size: 18px;
+  font-size: 20px;
 }
+.flu .c-l {
+  color: white;
+  cursor: default;
+  text-decoration: none;
+}
+.flu .c-l:hover {
+  text-decoration: none;
+}
+
 .date {
   position: absolute;
   margin-top: 440px;
