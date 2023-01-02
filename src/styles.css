@@ -90,7 +90,7 @@ input[type="button"]:hover {
   margin: -8px -8px;
 }
 .card-body {
-  padding: 18px 5px;
+  padding: 18px 1px;
 }
 p {
   margin-left: 10;
@@ -114,7 +114,8 @@ p {
 .Wday {
   font-size: 35px;
   color: #354355;
-  opacity: 70%;
+  text-align: center;
+  text-shadow: #3d3d3d;
 }
 .Dday {
   font-size: 12px;
