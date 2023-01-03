@@ -51,12 +51,8 @@ function displayForcast(response) {
         `<div class="col-sm-1">
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title">${forecastDate(
-                  forecastDay.temperature.day
-                )}</h5>
-                
-                <p class="card-text">May 15</p>
-              
+                <h5 class="card-title">${forecastDate(forecastDay.time)}</h5>
+               <p class="card-text">May 15</p>
                 <p class="Weather">
                   <span class="Wday"
                     ><img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
