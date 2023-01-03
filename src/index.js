@@ -39,6 +39,33 @@ function forecastDate(timestamp) {
   return days[day];
 }
 
+function forecastMonth(timestemp) {
+  let date = new Date(timestemp * 1000);
+  let month = date.getMonth();
+  let months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Des",
+  ];
+  return months[month];
+}
+
+function forecastDays(timestemp) {
+  let date = new Date(timestemp * 1000);
+  let days = date.getDate();
+
+  return days;
+}
+
 function displayForcast(response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
@@ -52,7 +79,9 @@ function displayForcast(response) {
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title">${forecastDate(forecastDay.time)}</h5>
-               <p class="card-text">May 15</p>
+               <p class="card-text">${forecastMonth(
+                 forecastDay.time
+               )} ${forecastDays(forecastDay.time)}</p>
                 <p class="Weather">
                   <span class="Wday"
                     ><img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
